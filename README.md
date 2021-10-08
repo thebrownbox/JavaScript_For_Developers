@@ -1,1 +1,1 @@
-# JavaScript_For_Developers
+# JavaScript For Developers
