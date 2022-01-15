@@ -1,19 +1,32 @@
 process.stdout.write("\033c");
 //! ===============================================
 const mySet = new Set();
+const arr = [1,1,1,2,3,4,4,4,2,2,5,5];
 
-const a = {
-    valueOf() {
-        return 1;
-    },
+// for (const x of arr) {
+//     mySet.add(x);
+// }
+
+// console.log(mySet);
+// console.log(mySet.has(5));
+// console.log(mySet.size);
+
+// mySet.delete(5);
+// console.log("--delete--");
+
+// console.log(mySet);
+// console.log(mySet.has(5));
+// console.log(mySet.size);
+
+
+
+var containsDuplicate = function(nums) {
+    const mySet = new Set(nums);
+    if(mySet.size === nums.length){
+        return false;
+    }
+    return true;
 };
 
-mySet.add(1);
-mySet.add(2);
-mySet.add(3);
-mySet.add(3);
-mySet.add(3);
-mySet.add(a);
-mySet.add(a);
-
-console.log(mySet);
+const b = [1,2,3];
+console.log(containsDuplicate(b));
