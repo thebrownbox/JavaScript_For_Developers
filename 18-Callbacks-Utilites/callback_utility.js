@@ -82,4 +82,11 @@ function suDungSort(){
     console.log(arr);
 }
 
-suDungSort();
+function usingReduce(){
+    const arr = [1, 2, 3, 4, 5, 6];
+   
+    const sum = arr.reduce((prevSum, x) => prevSum + x, 0);
+    console.log(sum);
+}
+
+usingReduce()
