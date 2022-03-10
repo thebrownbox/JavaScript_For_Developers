@@ -2,7 +2,9 @@
 //? Round a to the 2nd digit after the comma
 //? Return the rounded number
 
-function myFunction(a = 0) {}
+function myFunction(a = 0) {
+    return Number(a.toFixed(2));
+}
 
 console.log(myFunction(2.12397)); //* 2.12
 console.log(myFunction(3.136)); //* 3.14

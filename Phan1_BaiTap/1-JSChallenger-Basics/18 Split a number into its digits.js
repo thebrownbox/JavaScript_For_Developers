@@ -1,8 +1,16 @@
-//? Write a function that takes a number (a) as argument
-//? Split a into its individual digits and return them in an array
-//? Tipp: you might want to change the type of the number for the splitting
+//? Write a function that takes a number
+//? (a) as argument
+//? Split a into its individual digits and
+//? return them in an array
+//? Tipp: you might want to change the type
+//? of the number for the splitting
 
-function myFunction(a = 0) {}
+function myFunction(a = 0) {
+    return a
+        .toString()
+        .split("")
+        .map((n) => parseInt(n));
+}
 
 console.log(myFunction(10)); //* [1,0]
 console.log(myFunction(931)); //* [9,3,1]

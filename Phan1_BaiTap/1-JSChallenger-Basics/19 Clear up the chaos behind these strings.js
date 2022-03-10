@@ -4,8 +4,16 @@
 //? 'Javascript', 'Countryside', and 'Downtown'
 //? You might want to apply basic JS string methods such as replace(), split(), slice() etc
 
-function myFunction(a = "", b = "") {}
+function myFunction(a = "", b = "") {
+    b = b.split("").reverse().join("");
+    a = (a + b).replace("%", "");
+    a = a[0].toUpperCase() + a.slice(1);
+    return a;
+}
 
-console.log(myFunction("java", "tpi%rcs")); //* 'Javascript'
-console.log(myFunction("c%ountry", "edis")); //* 'Countryside'
-console.log(myFunction("down", "nw%ot")); //* 'Downtown'
+console.log(myFunction("java", "tpi%rcs"));
+//* 'Javascript'
+console.log(myFunction("c%ountry", "edis"));
+//* 'Countryside'
+console.log(myFunction("down", "nw%ot"));
+//* 'Downtown'

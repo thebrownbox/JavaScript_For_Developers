@@ -3,12 +3,14 @@
 // or zero if the number is smaller than 6
 // The other elements should be the elements of the original array
 // Try not to mutate the original array
+
 function myFunction(arr, num) {
     return;
 }
-myFunction([1, 2, 3], 6);
-Expected[(6, 1, 2, 3)];
-myFunction(["a", "b"], 2);
-Expected[(0, "a", "b")];
-myFunction([null, false], 11);
-Expected[(11, null, false)];
+
+console.log(myFunction([1, 2, 3], 6));
+//* [6, 1, 2, 3]
+console.log(myFunction(["a", "b"], 2));
+//* [0, "a", "b"]
+console.log(myFunction([null, false], 11));
+//* [11, null, false]
