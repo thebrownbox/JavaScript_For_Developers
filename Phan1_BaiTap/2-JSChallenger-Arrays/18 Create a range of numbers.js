@@ -1,7 +1,15 @@
-// Write a function that takes two numbers (min and max) as arguments
-// Return an array of numbers in the range min to max
+//? Write a function that takes two numbers
+//? (min and max) as arguments
+//? Return an array of numbers in
+//? the range min to max
 
-function myFunction(min, max) {}
+function myFunction(min, max) {
+    const a = [];
+    for (let i = min; i <= max; i++) {
+        a.push(i);
+    }
+    return a;
+}
 
 console.log(myFunction(2, 10));
 //* [2, 3, 4, 5, 6, 7, 8, 9, 10]

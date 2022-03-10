@@ -1,9 +1,14 @@
-// Write a function that takes two arrays as arguments
-// Merge both arrays and remove duplicate values
-// Sort the merge result in ascending order
-// Return the resulting array
+//? Write a function that takes two arrays as arguments
+//? Merge both arrays
+//? and remove duplicate values
+//? Sort the merge result in ascending order
+//? Return the resulting array
 
-function myFunction(a = [], b = []) {}
+function myFunction(a = [], b = []) {
+    const arr = [...a, ...b];
+    const set = [...new Set(arr)];
+    return set.sort((a, b) => a - b);
+}
 
 console.log(myFunction([1, 2, 3], [3, 4, 5]));
 //* [1, 2, 3, 4, 5]
