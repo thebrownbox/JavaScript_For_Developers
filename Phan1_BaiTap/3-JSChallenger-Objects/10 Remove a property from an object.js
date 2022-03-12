@@ -3,8 +3,6 @@
 //? except for the property with key 'b'
 
 function myFunction(obj) {
-    delete obj.b;
-    return obj;
 }
 
 console.log(myFunction({ a: 1, b: 7, c: 3 }));

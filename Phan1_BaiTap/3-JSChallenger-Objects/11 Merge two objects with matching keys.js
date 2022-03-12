@@ -6,14 +6,10 @@
 //? It should have the properties 'a', 'b', 'c', 'd', and 'e'
 
 function myFunction(x, y) {
-    return;
+
 }
 
-/**
-console.log(myFunction({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 })
-Expected
-{ a: 1, b: 2, c: 3, e: 5, d: 4}
-console.log(myFunction({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 })
-Expected
-{ a: 5, b: 4, c: 3, e: 2, d: 1}
- */
+console.log(myFunction({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }));
+//* { a: 1, b: 2, c: 3, e: 5, d: 4}
+console.log(myFunction({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
+//* { a: 5, b: 4, c: 3, e: 2, d: 1}
