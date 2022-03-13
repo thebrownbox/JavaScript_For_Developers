@@ -3,8 +3,8 @@
 //? It should return true if the dates are equal
 //? It should return false otherwise
 
-function myFunction(a, b) {
-    return;
+function myFunction(a = new Date(), b = new Date()) {
+    return a.getTime() === b.getTime();
 }
 
 console.log(

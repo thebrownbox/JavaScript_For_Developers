@@ -1,10 +1,18 @@
 //? This is a more difficult challenge
 //? Write a function that takes two date instances as arguments
-//? It should return an object with the properties 'hrs', 'min', and 'sec'
-//? The corresponding values should display the absolute difference between the two dates in hours, minutes, and seconds
+//? It should return an object with the properties
+//? 'hrs', 'min', and 'sec'
+//? The corresponding values should display the
+//? absolute difference between the two dates
+//? in hours, minutes, and seconds
 
 function myFunction(a, b) {
-    return;
+    const diffSec = Math.abs(a - b) / 1000;
+    return {
+        hrs: Math.floor(diffSec / 3600),
+        min: Math.floor(diffSec / 60) % 60,
+        sec: diffSec % 60,
+    };
 }
 
 console.log(

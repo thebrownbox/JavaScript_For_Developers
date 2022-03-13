@@ -3,7 +3,7 @@
 //? It should return false otherwise
 
 function myFunction(a, b) {
-    return;
+    return a < b;
 }
 
 console.log(
