@@ -1,8 +1,13 @@
 //? Write a function that takes two sets (a and b) as arguments
 //? Get the intersection of the sets
-//? In other words, return a set containing all elements that are both in a as well as b
+//? In other words, return a set containing all
+//? elements that are both in a as well as b
 
-function myFunction(a = new Set(), b = new Set()) {}
+function myFunction(a = new Set(), b = new Set()) {
+    const x = new Set();
+    a.forEach((e) => b.has(e) && x.add(e));
+    return x;
+}
 
 console.log(myFunction(new Set([1, 2, 3]), new Set([4, 5, 6])));
 //* new Set()

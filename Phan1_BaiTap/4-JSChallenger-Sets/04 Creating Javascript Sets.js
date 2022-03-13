@@ -2,7 +2,9 @@
 //? Create a Set from those elements
 //? Return the result
 
-function myFunction(a, b, c) {}
+function myFunction(a, b, c) {
+    return new Set([a, b, c]);
+}
 
 console.log(myFunction(1, "b", 3));
 //* new Set([1, 'b', 3])

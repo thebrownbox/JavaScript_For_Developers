@@ -1,7 +1,10 @@
-//? Write a function that takes a Set and a value as arguments
+//? Write a function that takes a Set and a
+//? value as arguments
 //? Check if the value is present in the Set
 
-function myFunction(set = new Set(), val) {}
+function myFunction(set = new Set(), val) {
+    return set.has(val);
+}
 
 console.log(myFunction(new Set([1, 2, 3]), 2));
 //* true;

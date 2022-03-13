@@ -1,9 +1,14 @@
 //? Write a function that takes two Sets as arguments
 //? Create the union of the two sets
 //? Return the result
-//! Note: try not to switch to Arrays, this would slow down your code
+//! Note: try not to switch to Arrays,
+//! this would slow down your code
 
-function myFunction(a = new Set(), b = new Set()) {}
+function myFunction(a = new Set(), b = new Set()) {
+    const s = new Set(a);
+    b.forEach((e) => s.add(e));
+    return s;
+}
 
 console.log(myFunction(new Set("123"), new Set("234")));
 //* new Set('1234')

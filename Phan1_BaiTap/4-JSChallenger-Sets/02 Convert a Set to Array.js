@@ -2,7 +2,9 @@
 //? Convert the Set to an Array
 //? Return the Array
 
-function myFunction(set = new Set()) {}
+function myFunction(set = new Set()) {
+    return [...set];
+}
 
 console.log(myFunction(new Set([1, 2, 3])));
 //* [1, 2, 3]
