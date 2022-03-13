@@ -1,8 +1,11 @@
 //? Write a function that takes an object with two properties as argument
-//? It should return the value of the property with key 'prop-2'
+//? It should return the value of the property
+//? with key 'prop-2'
 //! Note: you might want to use the square brackets property accessor
 
-function myFunction(obj) {}
+function myFunction(obj) {
+    return obj["prop-2"];
+}
 
 console.log(myFunction({ one: 1, "prop-2": 2 }));
 //* 2

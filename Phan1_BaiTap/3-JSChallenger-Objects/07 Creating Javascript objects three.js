@@ -1,8 +1,13 @@
 //? Write a function that takes two arrays (a and b) as arguments
-//? Create an object that has properties with keys 'a' and corresponding values 'b'
+//? Create an object that has properties with
+//? keys [a] and corresponding values [b]
 //? Return the object
 
-function myFunction(a = [], b) {}
+function myFunction(a = [], b) {
+    const x = {};
+    a.forEach((key, i) => (x[key] = b[i]));
+    return x;
+}
 
 console.log(myFunction(["a", "b", "c"], [1, 2, 3]));
 //* {a:1,b:2,c:3}

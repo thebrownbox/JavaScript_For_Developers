@@ -2,7 +2,9 @@
 //? Return true if a has a property with key b
 //? Return false otherwise
 
-function myFunction(a, b) {}
+function myFunction(a, b) {
+    return !!a[b];
+}
 
 console.log(myFunction({ a: 1, b: 2, c: 3 }, "b"));
 //* true

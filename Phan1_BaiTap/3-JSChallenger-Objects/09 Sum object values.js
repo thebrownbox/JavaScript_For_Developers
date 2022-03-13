@@ -2,7 +2,13 @@
 //? Return the sum of all object values
 
 function myFunction(a) {
-
+    // let sum = 0;
+    // for (const key in a) {
+    //     sum += a[key];
+    // }
+    // return sum;
+    const arr = Object.values(a);
+    return arr.reduce((sum, e) => sum + e);
 }
 
 console.log(myFunction({ a: 1, b: 2, c: 3 }));
