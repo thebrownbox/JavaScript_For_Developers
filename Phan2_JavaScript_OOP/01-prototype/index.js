@@ -1,3 +1,2 @@
-if(true){
-    console.log("hell");
-}
+'use strict';
+a = 10;
