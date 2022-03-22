@@ -1,21 +1,22 @@
 "use strict";
-//example 2: Object & functionPointer
-
+//example 2: function declaration & function expression
+this.name = "GLOBAL";
 const x = {
     name: "x",
     normalFunction() {
-        console.log("normalFunction", this);
+        console.log("normalFunction", this?.name);
     },
-    arrowFunction: () => {
-        console.log("arrowFunction", this);
+
+    functionExpression: function () {
+        console.log("functionExpression", this?.name);
     },
 };
 
 x.normalFunction();
-x.arrowFunction();
+x.functionExpression();
 
 const functionPointer = x.normalFunction;
 functionPointer();
 
-const arrowFunctionPointer = x.arrowFunction;
-arrowFunctionPointer();
+const functionExpressionPointer = x.functionExpression;
+functionExpressionPointer();

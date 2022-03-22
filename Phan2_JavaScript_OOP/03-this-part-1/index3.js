@@ -1,17 +1,14 @@
 "use strict";
-//example 3: function & arrow function in method
-const y = {
-    doSomething() {
-        function helperFunction() {
-            console.log("helperFunction", this);
-        }
-        const helperArrowFunction = () => {
-            console.log("helperArrowFunction", this);
-        };
-        console.log("doSomething", this);
-        helperFunction();
-        helperArrowFunction();
+//example 3: arrow function
+this.name = "GLOBAL";
+const x = {
+    name: "x",
+    arrowFunction: () => {
+        console.log("arrowFunction", this?.name);
     },
 };
 
-y.doSomething();
+x.arrowFunction();
+
+const arrowFunctionPointer = x.arrowFunction;
+arrowFunctionPointer();
