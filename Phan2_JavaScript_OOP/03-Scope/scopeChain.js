@@ -1,13 +1,13 @@
 "use strict";
 
-const name = "GLOBAL";
+const myName = "GLOBAL";
 
 function doSomething() {
-    const name = "LOCAL";
+    const myName = "LOCAL";
     const age = 10;
     if (age === 10) {
-        const name = "BLOCK";
-        console.log({ name });
+        const myName = "BLOCK";
+        console.log(myName);
     }
 }
 

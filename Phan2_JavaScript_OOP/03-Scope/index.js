@@ -1,9 +1,10 @@
 "use strict";
 
-const globalVariable = 100;
+const globalVariable = 99;
 
 function globalFunction() {
     const localVariable = 99;
+    console.log("globalFunction");
 
     function localFunction() {
         if (globalVariable === 100) {
