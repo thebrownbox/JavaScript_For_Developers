@@ -8,22 +8,32 @@ const x = {
     name: "x",
     arr: [1, 2, 3],
 
+    showArray() {
+        console.log(this.arr);
+    },
+
     arrowFunction: (e) => {
+        console.log(e, this.name);
+    },
+
+    normalFunction(e) {
         console.log(e, this?.name);
     },
 
-    method() {
-        this.arr.forEach(function myFunction(e) {
-            console.log(e, this?.name);
-        });
-
-        this.arr.forEach(this.arrowFunction);
-
+    showArrayWithName() {
         this.arr.forEach((e) => {
-            console.log(e, this?.name);
+            console.log(e, this.name);
         });
+
+        // this.arr.forEach(arrowFunction);
+        // this.arr.forEach(this.normalFunction);
+        // this.arr.forEach(function (e) {
+        //     console.log(e, this?.name);
+        // });
     },
 };
 
-x.method();
+x.showArray();
+x.showArrayWithName();
+
 //? Best practice 2

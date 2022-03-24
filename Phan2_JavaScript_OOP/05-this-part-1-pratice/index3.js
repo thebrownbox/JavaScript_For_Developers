@@ -4,17 +4,17 @@ this.name = "GLOBAL";
 
 const x = {
     name: "x",
-    method(){
+    method() {
         console.log("method", this?.name);
-    }
+    },
 };
 
-const y = {
-    name: "y"
-}
-
 //! example 5: Method is attached to another object
-y.borrowMethod = x.method;
+const y = {
+    name: "y",
+};
+
+y.method = x.method;
 
 x.method();
-y.borrowMethod();
+y.method();

@@ -11,9 +11,9 @@ const x = {
     },
 };
 
-function normalFunction() {
+const normalFunction = function () {
     console.log("normalFunction", this?.name);
-}
+};
 
 const arrowFunction = () => {
     console.log("arrowFunction", this?.name);

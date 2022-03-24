@@ -6,16 +6,18 @@ this.name = "GLOBAL";
 const x = {
     name: "x",
     method() {
-        const functionInAMethod = function () {
-            console.log("functionInAMethod", this?.name);
+        console.log("method", this?.name);
+
+        const normalFunction = function () {
+            console.log("normalFunction", this?.name);
         };
 
-        const arrowFunctionInAMethod = () => {
-            console.log("arrowFunctionInAMethod", this?.name);
+        const arrowFunction = () => {
+            console.log("arrowFunction", this?.name);
         };
 
-        functionInAMethod();
-        arrowFunctionInAMethod();
+        normalFunction();
+        arrowFunction();
     },
 };
 

@@ -8,11 +8,13 @@ const x = {
     name: "x",
     methodX() {
         console.log("methodX", this?.name);
+
         const y = {
             name: "y",
             methodY() {
                 console.log("methodY", this?.name);
             },
+            //Best practice 1
             arrowMethodY: () => {
                 console.log("arrowMethodY", this?.name);
             },
@@ -24,4 +26,3 @@ const x = {
 };
 
 x.methodX();
-//? => Best Practice 1

@@ -3,15 +3,16 @@
 this.name = "GLOBAL";
 
 function globalFunction() {
-    const nestedFunction = function () {
-        console.log("nestedFunction", this?.name);
+    const normalFunction = function () {
+        console.log("normalFunction", this?.name);
     };
 
-    const arrowFunctionInAFunction = () => {
-        console.log("arrowFunctionInAFunction", this?.name);
+    const arrowFunction = () => {
+        console.log("arrowFunction", this?.name);
     };
-    nestedFunction();
-    arrowFunctionInAFunction();
+
+    normalFunction();
+    arrowFunction();
 }
 
 globalFunction();

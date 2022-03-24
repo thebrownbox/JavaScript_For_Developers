@@ -13,7 +13,13 @@ const x = {
     },
 };
 
-//! Example 1: switching function => method
+normalFunction();
+x.method();
 
+//! Example 1: switching function => method
+x.otherFunction = normalFunction;
+x.otherFunction();
 
 //! Example 2: switching function <= method
+const anotherFunction = x.method;
+anotherFunction();
