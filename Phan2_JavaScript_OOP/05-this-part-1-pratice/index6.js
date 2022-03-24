@@ -1,49 +1,19 @@
 "use strict";
-//example 6: callback function
-const x = {
-    name: "x",
-    arr: [1, 2, 3, 4, 5],
-    doSomething1() {
-        this.arr.forEach((e) => {
-            console.log(this?.name, e);
-        });
-    },
+//! Example 8: callback function
 
-    doSomething2() {
-        this.arr.forEach(function (e) {
-            console.log(this?.name, e);
-        });
-    },
+this.name = "GLOBAL";
 
-    show(e) {
-        console.log(this?.name, e);
-    },
+function executeThisFunction(inputFunction) {
+    inputFunction();
+}
 
-    doSomething3() {
-        this.arr.forEach(this.show);
-    },
+function normalFunction() {
+    console.log("normalFunction", this?.name);
+}
 
-    nestedObject: {
-        name: "y",
-        doOtherThing() {
-            const arrow = () => {
-                const z = {
-                    name: "z",
-                    doMoreThing() {
-                        const arrow2 = () => {
-                            console.log("arrow2", this?.name);
-                        };
-                        arrow2();
-                    },
-                };
-                z.doMoreThing();
-            };
-            arrow();
-        },
-    },
+const arrowFunction = () => {
+    console.log("arrowFunction", this?.name);
 };
 
-x.doSomething1();
-x.doSomething2();
-x.doSomething3();
-x.nestedObject.doOtherThing();
+executeThisFunction(normalFunction);
+executeThisFunction(arrowFunction);

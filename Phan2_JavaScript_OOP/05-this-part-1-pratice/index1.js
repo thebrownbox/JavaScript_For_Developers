@@ -1,9 +1,9 @@
 "use strict";
-//example 1: global function
-//!Only work with Browser Env
+
 this.name = "GLOBAL";
-function aFunction() {
-    console.log("aFunction", this?.name);
+
+function normalFunction() {
+    console.log("normalFunction", this?.name);
 }
 
 const x = {
@@ -11,23 +11,9 @@ const x = {
     method() {
         console.log("method", this?.name);
     },
-    methodArrow: () => {
-        console.log("methodArrow", this?.name);
-    },
 };
 
-aFunction();
-x.method();
-x.methodArrow();
+//! Example 1: switching function => method
 
-x.aFunction = aFunction;
-x.aFunction();
 
-const aMethod = x.method;
-aMethod();
-
-const y = {
-    name: "y",
-};
-y.method = aMethod;
-y.method();
+//! Example 2: switching function <= method

@@ -1,27 +1,17 @@
 "use strict";
-//example 4: nested function
+//! Example 6: nested functions
 this.name = "GLOBAL";
-const x = {
-    name: "x",
-    someFunction() {
-        function f1() {
-            console.log("f1", this?.name);
-        }
 
-        const f2 = function () {
-            console.log("f2", this?.name);
-        };
+function globalFunction() {
+    const nestedFunction = function () {
+        console.log("nestedFunction", this?.name);
+    };
 
-        const f3 = () => {
-            console.log("f3", this?.name);
-        };
+    const arrowFunctionInAFunction = () => {
+        console.log("arrowFunctionInAFunction", this?.name);
+    };
+    nestedFunction();
+    arrowFunctionInAFunction();
+}
 
-        console.log("someFunction", this?.name);
-
-        f1();
-        f2();
-        f3();
-    },
-};
-
-x.someFunction();
+globalFunction();

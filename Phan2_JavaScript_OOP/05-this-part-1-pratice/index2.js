@@ -1,22 +1,24 @@
 "use strict";
-//example 2: function declaration & function expression
+
 this.name = "GLOBAL";
+
 const x = {
     name: "x",
-    normalFunction() {
-        console.log("normalFunction", this?.name);
+    normalMethod() {
+        console.log("normalMethod", this?.name);
     },
-
-    functionExpression: function () {
-        console.log("functionExpression", this?.name);
+    arrowMethod: () => {
+        console.log("arrowMethod", this?.name);
     },
 };
 
-x.normalFunction();
-x.functionExpression();
+x.normalMethod();
 
-const functionPointer = x.normalFunction;
-functionPointer();
+//! Example 3: Arrow Method
+x.arrowMethod();
 
-const functionExpressionPointer = x.functionExpression;
-functionExpressionPointer();
+//? Best practice 1
+
+//! Example 4: Arrow Method => function
+const otherFunction = x.arrowMethod;
+otherFunction();

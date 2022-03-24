@@ -1,14 +1,20 @@
 "use strict";
-//example 3: arrow function
+
 this.name = "GLOBAL";
+
 const x = {
     name: "x",
-    arrowFunction: () => {
-        console.log("arrowFunction", this?.name);
-    },
+    method(){
+        console.log("method", this?.name);
+    }
 };
 
-x.arrowFunction();
+const y = {
+    name: "y"
+}
 
-const arrowFunctionPointer = x.arrowFunction;
-arrowFunctionPointer();
+//! example 5: Method is attached to another object
+y.borrowMethod = x.method;
+
+x.method();
+y.borrowMethod();
